@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Create Box</h1>
+<div mat-dialog-content>
+  <form #f="ngForm" class="container" novalidate>
+    <mat-form-field>
+      <input name="boxId" matInput placeholder="Box Number" [(ngModel)]="box.boxId" autofocus required>
+    </mat-form-field>
+    <mat-form-field class='dt-picker'>
+      <input name="dateCreated" matInput [matDatepicker]="picker" placeholder="Date Created" [(ngModel)]="box.dateCreated">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input name="boxNotes" matInput placeholder="Notes" [(ngModel)]="box.boxNotes">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSubmit(f)" cdkFocusInitial [disabled]="f.invalid">Save Changes</button>
+</div>

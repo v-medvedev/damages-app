@@ -1,0 +1,9 @@
+mat-toolbar {
+  background-color: #1976d2;
+  color: #fafafa;
+}
+
+mat-nav-list a.active {
+  background-color: #1976d2;
+  color: #fafafa;
+}

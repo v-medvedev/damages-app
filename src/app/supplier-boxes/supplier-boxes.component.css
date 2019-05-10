@@ -1,0 +1,52 @@
+.container {
+  position: relative;
+}
+
+.table-container {
+  position: relative;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+[mat-table] {
+  width: 100%;
+}
+
+[mat-table] tr[mat-row] {
+  cursor: pointer;
+}
+
+[mat-table] tr[mat-row] td {
+  padding-right: 8px;
+}
+
+[mat-table] tr[mat-row].selected {
+  background-color: #c9def3;
+}
+
+[mat-table] tr[mat-row].picked {
+  background-color: #43e06b;
+}
+
+[mat-table] tr.mat-header-row {
+  background-color: #3ba1f7;
+}
+
+[mat-table] tr.mat-header-row th {
+  font-weight: 900;
+}
+
+.button-row button {
+  margin-right: 10px;
+}
+
+.button-row {
+  padding-right: 10px;
+  margin: 0;
+}
+
+.supplier-header {
+  padding-left: 100px;
+  font-weight: bold;
+  flex: 1 1 auto;
+}

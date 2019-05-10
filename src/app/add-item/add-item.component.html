@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Add Product</h1>
+<div mat-dialog-content>
+  <form #f="ngForm" class="container" novalidate>
+    <mat-form-field>
+      <input name="stockNumber" matInput placeholder="StockNumber" [(ngModel)]="item.stockNumber" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input name="itemPrice" matInput placeholder="Price" [(ngModel)]="item.itemPrice" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select name="reasonCode" placeholder="Reason Code" [(value)]="item.reasonCode" [(ngModel)]="item.reasonCode">
+        <mat-option *ngFor="let code of reasonCodes" [value]="code.value">
+          {{code.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSubmit(f)" cdkFocusInitial [disabled]="f.invalid">Save Changes</button>
+</div>
